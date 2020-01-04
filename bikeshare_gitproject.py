@@ -3,6 +3,7 @@ import pandas as pd
 
 print('Hi! Let\'s explore some bikeshare data :)')
 
+#Note to self: replace local directory strings with just the file name, e.g. chicago.csv, when submitting this project
 bike_data = { 'chicago': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/chicago.csv'),
               'new york': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/new_york_city.csv'),
               'washington': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/washington.csv') }
