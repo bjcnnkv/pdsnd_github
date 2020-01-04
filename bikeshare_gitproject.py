@@ -8,13 +8,14 @@ bike_data = { 'chicago': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/P
               'new york': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/new_york_city.csv'),
               'washington': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/washington.csv') }
 
+#create a function to store user inputs
 def get_filters():
     city = get_city()
     month = get_month()
     day = get_day()
     return [city, month, day]
 
-#city input from user
+#get city input from user
 def get_city():
 
     #city input feature will update automatically if changes to the city key names are made
