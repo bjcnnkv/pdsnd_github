@@ -3,20 +3,27 @@ import pandas as pd
 
 print('Hi! Let\'s explore some bikeshare data :)')
 
+#Note to self: replace local directory strings with just the file name, e.g. chicago.csv, when submitting this project
 bike_data = { 'chicago': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/chicago.csv'),
               'new york': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/new_york_city.csv'),
               'washington': pd.read_csv('D:/BCNV/Documents/BCNV info/AMP projects/Python project/washington.csv') }
 
+#create a function to store user inputs
 def get_filters():
     city = get_city()
     month = get_month()
     day = get_day()
     return [city, month, day]
 
-#city input from user
+#get city input from user
 def get_city():
 
-    print('We have bikeshare data on three US cities: Chicago, New York and Washington.')
+    #city input feature will update automatically if changes to the city key names are made
+    bike_data.keys()
+    city_names = list (bike_data.keys())
+    x = city_names[0] + ", " + city_names[1] + " and " + city_names[2]
+
+    print('We have bikeshare data on three US cities: {}'.format(x))
     time.sleep(1)
     print('Which CITY would you like to analyze?')
     time.sleep(1)
